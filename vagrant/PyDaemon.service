@@ -5,8 +5,6 @@ After=network.target
 
 [Service]
 Type=simple
-# User=<run as user>
-# Group=<run as group group>
 ExecStart=/vagrant/venv34/bin/python3 /vagrant/vagrant/DaemonManager/DaemonManager.py
 
 # Give the script some time to startup
