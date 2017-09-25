@@ -1,7 +1,7 @@
 import daemon
-import lockfile
 import signal
 import time
+# import lockfile
 
 
 class TestDaemon(object):
@@ -14,14 +14,12 @@ class TestDaemon(object):
 
     def run(self):
         i = 0
-        # self.stopped = False
         logfile = open('/root/py_daemon.log', 'a')
         logfile.writelines("Starting run.\n")
         while self.stopped is False:  # or i < 3:
-            # logfile.writelines("run " + str(i) + "\n")
             logfile.writelines("run " + str(i) + "\n")
             i = i + 1
-            # time.sleep(1)
+            time.sleep(1)
         logfile.writelines("exited cleanly at " + str(i) + "\n")
         logfile.close()
 
